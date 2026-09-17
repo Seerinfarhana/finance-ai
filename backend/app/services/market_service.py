@@ -33,7 +33,7 @@ def get_stock_news(ticker: str):
 
     params = {
         "ticker": ticker,
-        "limit": 10,
+        "limit": 5,
         "order": "desc",
         "sort": "published_utc",
         "apiKey": API_KEY

@@ -220,7 +220,7 @@ def start_scheduler():
         scheduler.add_job(
             automated_market_update,
             trigger="interval",
-            minutes=1,
+            minutes=5,
             id="market_update",
             replace_existing=True,
         )
