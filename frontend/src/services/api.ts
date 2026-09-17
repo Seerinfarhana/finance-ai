@@ -45,3 +45,10 @@ export async function getAutomationStatus() {
   return response.data;
 }
 export default api;
+export async function sendChatMessage(message: string) {
+  const response = await api.post("/api/chat/", {
+    message,
+  });
+
+  return response.data;
+}
