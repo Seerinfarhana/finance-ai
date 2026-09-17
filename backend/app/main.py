@@ -14,6 +14,7 @@ from app.routes import (
     news,
     portfolio,
     automation,
+    chat,
 )
 Base.metadata.create_all(bind=engine)
 @asynccontextmanager
@@ -61,6 +62,11 @@ app.include_router(
     automation.router,
     prefix="/api/automation",
     tags=["Automation"],
+)
+app.include_router(
+    chat.router,
+    prefix="/api/chat",
+    tags=["Chatbot"],
 )
 
 @app.get("/")
